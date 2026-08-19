@@ -13,7 +13,7 @@ namespace Rulealize.Plugin.Logic
     /// <remarks>
     /// Operands are evaluated strictly in array order and that order is part of the
     /// contract, not an implementation detail. It is the only way a rule author can put a
-    /// cheap test in front of an expensive one — Othello's placement guard checks that a
+    /// cheap test in front of an expensive one — Reversi's placement guard checks that a
     /// square is empty before it walks eight rays out of it, and on a crowded board that
     /// ordering is what keeps the ray walk off most of the squares.
     /// </remarks>

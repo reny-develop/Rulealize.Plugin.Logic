@@ -31,7 +31,7 @@ assembles a condition, not a node that changes what gets evaluated.
 ### Form
 
 ```jsonc
-{ "op": "logic.and", "all": [<expression:Bool>, ...] }
+{ "op": "logic.and", "all": [<expression:Boolean>, …] }
 ```
 
 ### How it evaluates
@@ -83,7 +83,7 @@ There is no implicit conversion of `Null` or `0` to false, the same policy
 ### Form
 
 ```jsonc
-{ "op": "logic.or", "any": [<expression:Bool>, ...] }
+{ "op": "logic.or", "any": [<expression:Boolean>, …] }
 ```
 
 ### How it evaluates
@@ -117,7 +117,7 @@ scans the whole board.
 ### Form
 
 ```jsonc
-{ "op": "logic.not", "value": <expression:Bool> }
+{ "op": "logic.not", "value": <expression:Boolean> }
 ```
 
 ### How it evaluates
@@ -139,7 +139,7 @@ Passing is legal exactly when there is no move.
 ### Form
 
 ```jsonc
-{ "op": "logic.xor", "of": [<expression:Bool>, ...] }
+{ "op": "logic.xor", "of": [<expression:Boolean>, …] }
 ```
 
 ### How it evaluates
@@ -179,8 +179,8 @@ is false — so it waits until something demonstrates the need.
 
 - **No three-valued logic.** Treating `Null` as "unknown" is not introduced, and anything
   that is not `Bool` stays an evaluation fault. The scenario that would argue for it is an
-  aggregate whose predicate can return `Null`, and across five rule sets that has never
-  arisen: writing `cmp.isNull` where the question is actually being asked has been both
+  aggregate whose predicate can return `Null`, and across the rule sets written so far that
+  has never arisen: writing `cmp.isNull` where the question is actually being asked has been both
   possible and clearer every time.
 - **No limit on how many elements `logic.and` takes.** The reason to want one would be
   estimating what a `GetValidInputs` sweep costs before running it, and expression size is
