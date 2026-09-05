@@ -23,7 +23,7 @@ namespace Rulealize.Plugin.Logic
     {
         /// <inheritdoc />
         public PluginManifest Manifest { get; } =
-            new("Rulealize.Plugin.Logic", new Version(1, 0, 0), "logic");
+            new("Rulealize.Plugin.Logic", new Version(1, 0, 1), "logic");
 
         /// <inheritdoc />
         public void Register(IPluginRegistry registry)
